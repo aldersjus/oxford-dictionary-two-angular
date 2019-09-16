@@ -21,3 +21,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run the below commands to get the application working without a CORS error.Mac only example,sorry Windows users. Please google.
 open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 ng serve
+
+<p align="center">
+  <img src="https://github.com/aldersjus/oxford-dictionary-two-angular/blob/master/src/assets/github-image.png"/>
+</p>
