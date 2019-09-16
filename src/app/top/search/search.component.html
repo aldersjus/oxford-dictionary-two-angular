@@ -6,6 +6,23 @@
         <br>
         <button type="button" 
         class="btn btn-outline-dark btn-lg btn-block" 
-        (click)="sendRequest()">Search Dictionary</button>
+        (click)="sendRequest()">Search</button>
     </div>
 </Form>
+<div *ngIf="fetched; else elseBlock">
+    <app-dictionary-result [requestedWord]="requestedWord"></app-dictionary-result>
+</div>
+<ng-template #elseBlock>
+    <h3>Oxford English Dictionary application.</h3>
+    <p>This has been built using the Angular framework. It is a simple application that connects to the Oxford 
+        English dictionary API to search for the entered word. It is not production ready, it was built
+        to learn the basics of working with Angular and using the HTTP library.
+    </p>
+    <br>
+    <h4>How to use.</h4>
+    <p>Remember that you will need your own API key and password from Oxford English Dictionary.
+        Enter a word in the box and the results will be displayed here. It currently only works with the 
+        base form of verbs, so if enter you "walking" instead of "walk" it might fail to return anything,
+        this application will display any errors in an alert box.
+    </p>
+</ng-template>

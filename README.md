@@ -1,4 +1,14 @@
-# Oxford
+## About App
+
+This has been built using the Angular framework and Bootstrap for the styling. It is a simple application that connects to the Oxford English dictionary API to search for the entered word. It is not production ready,it was built to learn the basics of working with Angular and using the HTTP library.
+
+Remember that you will need your own API key and password from Oxford English Dictionary.
+Enter a word in the search box and the results will be displayed below. It currently only works with the base form of verbs, so if enter you "walking" instead of "walk" it might fail to return anything, this application will display any errors in an alert box.
+
+There is a slightly different take on this application at the below link, they are essentially the same application just wired up a little differently. As stated earlier both of these applications were built as a learning exercise and nothing more.
+[Oxford Dictionary Angular App](https://github.com/aldersjus/oxford-dictionary-angular)
+
+# Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
@@ -6,22 +16,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## How to run without CORS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run the below commands to get the application working without a CORS error.Mac only example,sorry Windows users. Please google.
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+ng serve

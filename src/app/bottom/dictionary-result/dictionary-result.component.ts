@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WordShareService } from 'src/app/services/word-share.service';
-
 
 @Component({
   selector: 'app-dictionary-result',
@@ -9,15 +8,15 @@ import { WordShareService } from 'src/app/services/word-share.service';
 })
 export class DictionaryResultComponent implements OnInit {
 
-  word : String;
   meaning : String;
   use : String;
-  type : String;
-  
+  @Input('requestedWord') word : String;
+
   constructor(private wordShare : WordShareService) { }
 
+  
+
   ngOnInit() {
-    this.wordShare.currentWord.subscribe(w => this.word = w);
     this.wordShare.currentMeaning.subscribe(m => this.meaning = m);
     this.wordShare.currentUse.subscribe(m => this.use = m);
   }
